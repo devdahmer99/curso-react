@@ -1,5 +1,6 @@
 import React from 'react';
 import {Header} from './components/Header';
+import {Photo} from './components/Photo';
 
 /*const App = () => {
   let name: string = 'Eduardo';
@@ -20,8 +21,11 @@ function somar(n1: number, n2: number): number {
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Header title="Este é um exemplo de prop"/>
+      
       Olá, Mundo!
+
+      <Photo src="https://www.google.com.br/google.jpg" legend="Google"/>
       </div>
   )
 }

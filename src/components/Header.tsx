@@ -1,8 +1,12 @@
-export const Header = () => {
+type Props = {
+    title: string;
+}
+
+export const Header = ({title}: Props) => {
     return (
         <header>
-        <h1>Titulo da Página</h1>
-        <hr />
+            <h1>{title}</h1>
+            <hr />
         </header>
     );
   }
