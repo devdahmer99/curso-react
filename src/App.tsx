@@ -1,23 +1,19 @@
-import React from 'react';
-import {Header} from './components/Header';
-import {Photo} from './components/Photo';
-
-
-const HandleButtonClick = () => {
-    alert('O Botão foi clicado!');
-}
+import {useState} from 'react';
 
 const App = () => {
+  const [name, setName] = useState('Eduardo');
+
+  const handleClick = () => {
+    setName('Pedro');
+  }
+
+
   return (
     <div>
-      <Header title="Este é um exemplo de uma prop"/>
-      
-      <button onClick={HandleButtonClick}>Clique Aqui!</button>
-
-      <Photo src="https://www.google.com.br/google.jpg" legend="Google"/>
-
-      </div>
-  )
+      Meu nome é: {name}
+        <button onClick={handleClick}>Clique Aqui</button>
+    </div>
+  );
 }
 
 
