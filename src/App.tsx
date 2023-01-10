@@ -1,20 +1,20 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 const App = () => {
-  const [name, setName] = useState('Eduardo');
+  const [name, setName] = useState('');
 
-  const handleClick = () => {
-    setName('Pedro');
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
   }
-
 
   return (
     <div>
-      Meu nome é: {name}
-        <button onClick={handleClick}>Clique Aqui</button>
+      Nome:
+        <input type="text" value={name} onChange={handleInput}/>
+        <hr/>
+      Seu nome é: {name}
     </div>
   );
 }
-
 
 export default App;
