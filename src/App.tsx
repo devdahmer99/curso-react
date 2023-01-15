@@ -1,4 +1,7 @@
 import { useState } from "react";
+import './styles.css'
+import { Botao } from "./components/Botao";
+
 const App = () => {
     const [color, setColor] = useState('#FF0000');
     const [padding, setPadding] = useState(0);
@@ -8,10 +11,14 @@ const App = () => {
         setPadding(20);
     }
 
-
     return (
+        <Botao/>
+     );
+
+
+   /*return (
      <div>
-        <button
+        <button className="botao"
         onClick={handleClick} 
         style={{
             backgroundColor: color,
@@ -20,7 +27,7 @@ const App = () => {
             padding: padding
         }}>Clique aqui</button>
      </div>
-    );
+    );*/
 }
 
 export default App;
