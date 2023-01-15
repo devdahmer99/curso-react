@@ -1,9 +1,29 @@
-import { useState } from "react";
-import './styles.css'
-import { Botao } from "./components/Botao";
+
+import styled from "styled-components";
+
+const Container = styled.div `
+    background-color: blue;
+    color: white;
+    padding: 20px;
+`;
+
+const Botao = styled.button `]
+    font-size: 40px;
+    margin-left:10px;
+`; 
 
 const App = () => {
-    const [color, setColor] = useState('#FF0000');
+
+    return (
+      <Container>
+        Texto do Componente
+        <Botao>Clique aqui!</Botao>
+      </Container>
+    ) ;
+
+
+
+    /*const [color, setColor] = useState('#FF0000');
     const [padding, setPadding] = useState(0);
 
     const handleClick = () => {
@@ -14,7 +34,7 @@ const App = () => {
     return (
         <Botao/>
      );
-
+*/
 
    /*return (
      <div>
