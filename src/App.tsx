@@ -1,26 +1,22 @@
-import React, {useEffect} from 'react';
-import ContactForm from './contact';
+import React from 'react';
+import { Botao } from './components/Botao';
 
-function App() {
-  useEffect(() => {
-    if(document) {
-      const folhaEstilo = document.createElement("link");
-      folhaEstilo.rel = "stylesheet";
-      folhaEstilo.href = "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+const App = () => {
+    let textBotao = 'Clicar no Botão';
 
-      document.head.appendChild(folhaEstilo);
+    const botaoEventAction = (txt:string) => {
+        alert('Frase do App '+txt);
     }
-  }, []);
-  
-  return (
-    <div className='App'>
-        <header className="App-Header">
-          <div className="py-6">
-            <ContactForm/>
-          </div>
-        </header>
-    </div>
-  );
+
+    return (
+        <div>
+             <Botao text={textBotao} clickFN={botaoEventAction}/>
+        </div>
+       
+    )
+
 }
+
+
 
 export default App;
